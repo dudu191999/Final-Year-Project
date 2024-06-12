@@ -42,67 +42,6 @@ The app is built using modern Android development technologies and features an i
 **categories:** A list of CategoryItem objects for the home screen category cards.
 **images:** Lists of image resource IDs for the gallery components.
 
-**Simplified Flowchart**
-
-+----------------+
-|     Start      |
-+----------------+
-      |
-      v
-+----------------+
-| Splash Screen  |
-+----------------+
-      |
-      v
-+----------------+
-|   Home Screen   |
-+----------------+
-      |
-      v
-+-------------+     +--------------+    +-------------+
-|             |---->|              |--->|             |
-| User selects|     | User selects |    | User selects|
-|  Category   |     | Tour Guide   |    | Contact Us  |
-|             |<----|              |<---|             |
-+-------------+     +--------------+    +-------------+
-      |                  |                    |
-      v                  v                    v
-+----------------+    +-----------------+  +----------------+
-|Category Screen |    |Tour Guide Screen|  |Contact Us Screen|
-|(History,       |    |                |  |                |
-|Culture, Food) |    |                |  |                |
-+----------------+    +-----------------+  +----------------+
-      |                  |
-      v                  v
-+-----------------+   +----------------+
-|Display Images   |   |Generate QR Code|
-|and Information |   |                |
-+-----------------+   +----------------+
-
-
-****Simplified Data Flow****
-
-User Action (e.g., click "Generate QR Code")
-    |
-    v
-TourGuideScreen (Composable)
-    |
-    v
-MyCityViewModel
-    |   (Updates the _uiState with new qrBitmap)
-    v
-UiState (StateFlow)
-    |  (Triggers recomposition)
-    v
-QrScreen (Composable)
-    |
-    v
-User Sees Updated QR Code
-
-
-
-**pictures**
-
 
 
 
