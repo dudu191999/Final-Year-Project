@@ -5,7 +5,7 @@ It provides information about the city's history, culture, and culinary scene.
 The app is built using modern Android development technologies and features an intuitive user interface.
 
 
-
+ 
 
 
 
